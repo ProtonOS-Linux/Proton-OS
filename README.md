@@ -10,7 +10,7 @@ A secure, Windows-familiar Linux distribution built for small business operation
 
 > **The zero-friction, high-performance Linux distribution designed for small businesses transitioning from Windows.**
 
-Proton OS is a lightweight, secure, and intuitive operating system built on top of **Debian 13 (Trixie)**. Designed specifically for small office environments, non-technical teams, modern and legacy hardware, Proton OS delivers a familiar desktop experience with zero learning curve and zero downtime.
+Proton OS is a lightweight, secure, and intuitive operating system built on top of **Debian 13 (Trixie)**. Designed specifically for small office environments, non-technical teams, modern and legacy hardware. Proton OS delivers a familiar desktop experience with zero learning curve and zero downtime.
 
 ---
 
