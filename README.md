@@ -92,6 +92,33 @@ Proton OS runs on most UEFI-based hardware and modern-to-slightly-older machines
 
 ---
 
+## Verify Your Download
+
+Confirm your downloaded ISO hasn't been corrupted or tampered with:
+
+**Latest release:** `ProtonOS-1.0-64bit-2026.08.19.iso` (Updated 2026-08-19)
+
+| Algorithm | Checksum |
+|---|---|
+| SHA-256 | `c20bd28f9721e3e125b5126d443e8a55439a345e513c6363df8ad208bcb5a16e` |
+| MD5 | `014271bbb2233a632faf5136fad9a3ed` |
+
+**Linux/macOS:**
+```bash
+sha256sum ProtonOS-1.0-64bit-2026.08.19.iso
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-FileHash ProtonOS-1.0-64bit-2026.08.19.iso -Algorithm SHA256
+```
+
+Compare the output against the SHA-256 value above — they should match exactly.
+
+> GPG-signed releases are planned for a future update to provide stronger authenticity verification beyond checksums.
+
+---
+
 ## Repository Structure
 
 ```text
