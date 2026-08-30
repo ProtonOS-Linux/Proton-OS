@@ -28,8 +28,7 @@ machine — not something fixable in the Proton OS build itself.
 ## Not Yet Tested
 
 - Legacy BIOS-only hardware (no UEFI)
-- Broader range of GPU vendors (currently tested primarily on [fill in
-  what you've actually tested])
+- Broader range of GPU vendors (currently tested primarily on NVIDIA 1080ti Pascal)
 - Older/lower-spec hardware for Winboat's virtualization requirements
   (KVM support required)
 
