@@ -28,6 +28,7 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 More screenshots on [SourceForge](https://sourceforge.net/projects/proton-os/).
 
 ---
+
 ## Key Features for Business
 
 * **Familiar Desktop Interface:** Intuitive layout, Start-style application launcher, and system panel designed to mirror traditional Windows workflows.
@@ -50,6 +51,23 @@ Proton OS ships ready to use out of the box:
 - **Winboat** — run Windows applications directly on Proton OS via Docker + KVM virtualization
 
 See `software/` for exact install commands and Winboat's prerequisites.
+
+---
+
+## Why Proton OS?
+
+| | **Proton OS** | **Windows 10/11** | **Stock Debian/Ubuntu** |
+|---|---|---|---|
+| **License cost** | Free | Paid per device | Free |
+| **Telemetry** | None by default | Built-in, opt-out varies | None by default |
+| **Familiar desktop for Windows users** | Yes — Start-style launcher, taskbar layout | N/A | No — requires learning a new workflow |
+| **Firewall enabled by default** | Yes (UFW, deny incoming) | Yes | Varies by distro/install |
+| **AppArmor / mandatory access control** | Enabled by default | N/A (different security model) | Often not enabled by default |
+| **Automatic security updates** | Yes, out of the box | Yes | Manual setup typically required |
+| **Office suite included** | Yes (LibreOffice + ONLYOFFICE) | No (separate purchase/subscription) | Varies |
+| **Run Windows-only apps** | Yes, via Winboat (Docker + KVM) | N/A | Requires manual Wine/VM setup |
+| **Hardware support for older PCs** | Yes — extends lifecycle of existing hardware | Increasing minimum requirements each version | Yes, generally lightweight |
+| **Forced OS updates/reboots** | No | Yes | No |
 
 ---
 
