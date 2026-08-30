@@ -31,7 +31,8 @@ See security/ for verification details:
    
  (skel/discoverrc, skel/PlasmaDiscoverUpdates)  
 - AppArmor: installed and enabled, base profiles only  
-- UFW firewall: active by default, deny incoming / allow outgoing  
+- UFW firewall: active by default, deny incoming / allow outgoing
+  
 **Finishing the build**  
 1. Exit chroot, verify custom-disk/live/ has vmlinuz, initrd.xz,  
    
