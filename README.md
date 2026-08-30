@@ -14,6 +14,21 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 * **Debian 13 Stability:** Rock-solid upstream core with low system overhead and zero forced bloatware or forced snap packages.
 * **Built-in Security:** Security controls enable by default, automated background security patch update, and built-in firewall configurations.
 * **Hardware Friendly:** Extends the lifecycle of existing office PCs, significantly lowering hardware refresh costs.
+* **Windows App Compatibility:** Run real Windows applications seamlessly alongside native Linux apps via Winboat's Docker + KVM integration — no dual-boot or full VM required.
+
+---
+
+## Pre-installed Software
+
+Proton OS ships ready to use out of the box:
+
+- **Brave Browser** — privacy-focused browser, installed via Brave's official repo
+- **ONLYOFFICE Desktop Editors** — full office suite with strong Microsoft Office format compatibility
+- **LibreOffice** (full suite: Writer, Calc, Impress, Draw, Math, Base) — included by default with Debian 13
+- **Variety** — automatic wallpaper rotation
+- **Winboat** — run Windows applications directly on Proton OS via Docker + KVM virtualization
+
+See `software/` for exact install commands and Winboat's prerequisites.
 
 ---
 
