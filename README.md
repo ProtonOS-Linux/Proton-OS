@@ -36,7 +36,7 @@ More screenshots on [SourceForge](https://sourceforge.net/projects/proton-os/).
 * **Debian 13 Stability:** Rock-solid upstream core with low system overhead and zero forced bloatware or forced snap packages.
 * **Built-in Security:** Security controls enable by default, automated background security patch update, and built-in firewall configurations.
 * **Hardware Friendly:** Extends the lifecycle of existing office PCs, significantly lowering hardware refresh costs.
-* **Windows App Compatibility:** Run real Windows applications seamlessly alongside native Linux apps via Winboat's Docker + KVM integration — no dual-boot or full VM required.
+* **Windows App Compatibility:** Run real Windows applications seamlessly alongside native Linux apps via Winboat's Docker + KVM integration, no dual-boot or full VM required.
 
 ---
 
@@ -60,14 +60,35 @@ See `software/` for exact install commands and Winboat's prerequisites.
 |---|---|---|---|
 | **License cost** | Free | Paid per device | Free |
 | **Telemetry** | None by default | Built-in, opt-out varies | None by default |
-| **Familiar desktop for Windows users** | Yes — Start-style launcher, taskbar layout | N/A | No — requires learning a new workflow |
+| **Familiar desktop for Windows users** | Yes,  Start-style launcher, taskbar layout | N/A | No, requires learning a new workflow |
 | **Firewall enabled by default** | Yes (UFW, deny incoming) | Yes | Varies by distro/install |
 | **AppArmor / mandatory access control** | Enabled by default | N/A (different security model) | Often not enabled by default |
 | **Automatic security updates** | Yes, out of the box | Yes | Manual setup typically required |
 | **Office suite included** | Yes (LibreOffice + ONLYOFFICE) | No (separate purchase/subscription) | Varies |
 | **Run Windows-only apps** | Yes, via Winboat (Docker + KVM) | N/A | Requires manual Wine/VM setup |
-| **Hardware support for older PCs** | Yes — extends lifecycle of existing hardware | Increasing minimum requirements each version | Yes, generally lightweight |
+| **Hardware support for older PCs** | Yes, extends lifecycle of existing hardware | Increasing minimum requirements each version | Yes, generally lightweight |
 | **Forced OS updates/reboots** | No | Yes | No |
+
+---
+## FAQ
+
+**Will my existing Windows applications work?**
+Native Linux equivalents are pre-installed for common tasks (office, browsing, PDFs). For Windows-only software without a Linux version, Winboat runs it directly via a lightweight Docker + KVM Windows environment — see `software/winboat-prerequisites.txt` for setup details.
+
+**What about my printer, scanner, or other peripherals?**
+Proton OS is built on Debian 13, which has broad hardware support out of the box. Most USB printers/scanners work via standard Linux drivers (CUPS). Check manufacturer Linux driver availability for specialized hardware.
+
+**Can our IT team manage this remotely like a Windows fleet?**
+Standard Linux remote administration tools apply (SSH, VNC, etc.). Formal fleet-management tooling/guides are on the roadmap — contributions welcome.
+
+**Is this actually secure, or just "secure by default" marketing?**
+Every security claim in this repo is backed by verified configuration, documented under `security/` — including exact package versions and command output used to confirm each setting (firewall, AppArmor, automatic updates). Nothing here is assumed; it was checked against a live install.
+
+**What if something breaks?**
+Open an issue on this repository. Known hardware quirks and their fixes are tracked as we find them (see Repository Structure below for where fixes are documented).
+
+**Is my hardware supported?**
+Proton OS runs on most UEFI-based hardware and modern-to-slightly-older machines. One known compatibility quirk (older BIOS/xHCI USB controllers) is documented; broader legacy BIOS testing is ongoing.
 
 ---
 
