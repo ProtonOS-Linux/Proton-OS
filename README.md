@@ -20,10 +20,15 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 ## Repository Structure
 
 ```text
-proton-os/
-├── build/               # ISO creation recipes and live-build configurations
-├── config/              # Pre-configured desktop, panel, and theme defaults (/etc overlay)
-├── package-lists/       # Curated .deb package lists for small business workstations
-├── docs/                # Migration guides, deployment notes, and client documentation
+Proton-OS/
+├── sddm/                # Login screen fixes (avatar, theme) - login.defs, kde_settings.conf
+├── grub/                # Boot menu configs - grub.cfg, isolinux.cfg
+├── calamares/           # Installer shellprocess scripts
+├── plymouth/            # Boot splash config - plymouthd.conf
+├── skel/                # Default user config templates (/etc/skel overlay)
+├── packages/            # Package holds and apt install/purge commands
+├── software/            # Pre-installed app install methods (Brave, ONLYOFFICE, Winboat, etc.)
+├── security/            # Verified security defaults (AppArmor, UFW, unattended-upgrades)
+├── BUILD.md             # Step-by-step Cubic build procedure
 ├── LICENSE              # GNU General Public License v3.0
 └── README.md            # Repository overview

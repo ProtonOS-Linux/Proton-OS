@@ -1,0 +1,11 @@
+# Firewall (UFW)
+
+Verified via VM (sudo ufw status verbose):
+- ufw 0.36.2-9 installed
+- Service enabled at boot (systemctl is-enabled ufw -> enabled)
+- Status: active
+- Logging: on (low)
+- Default policy: deny (incoming), allow (outgoing), deny (routed)
+
+Firewall is active out of the box with a secure default posture -
+new users are protected without needing to configure anything.

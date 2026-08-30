@@ -1,0 +1,26 @@
+# Proton OS - Pre-installed Software
+
+## Brave Browser (brave-origin)
+Installed via official Debian repo method from brave.com/linux:
+sudo apt install curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg \
+  https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources \
+  https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+sudo apt update
+sudo apt install brave-origin
+
+## ONLYOFFICE Desktop Editors
+Installed via .deb package downloaded directly from
+https://www.onlyoffice.com/download-desktop.aspx
+sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
+sudo apt install -f    # resolve any dependency issues
+
+## LibreOffice (version 26.2.4.2)
+Included in base Debian 13 install by default. Confirmed full suite:
+Writer, Calc, Impress, Draw, Math, Base, plus EN/ES/FR dictionaries.
+No additional install steps needed.
+
+## Variety (wallpaper changer)
+Installed from Debian repos:
+sudo apt install variety

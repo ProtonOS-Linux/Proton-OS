@@ -1,0 +1,15 @@
+# Software Update Defaults (KDE Discover)
+
+Verified in /home/live/.config on a running Proton OS session,
+then applied to /etc/skel for new users:
+
+skel/discoverrc:
+  UseOfflineUpdates=true
+
+skel/PlasmaDiscoverUpdates:
+  UseUnattendedUpdates=true          # automatic updates enabled
+  RequiredNotificationInterval=2592000   # 2,592,000 sec = 30 days = monthly check
+
+Note: LastNotificationTime is intentionally NOT shipped in skel -
+it is a runtime timestamp written per-user on first check, not a
+setting that should be pre-seeded.

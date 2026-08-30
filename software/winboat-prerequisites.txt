@@ -1,0 +1,29 @@
+# Winboat Prerequisites (Docker + KVM method)
+# https://github.com/TibixDev/winboat
+# Verified against Winboat's built-in Pre-Requisites checker on Proton OS
+
+Hardware minimums (Winboat detected on test system: 14.95 GB RAM, 6 CPU cores):
+- At least 4 GB RAM
+- At least 2 CPU cores
+
+1. Enable virtualization (KVM) in BIOS/UEFI.
+
+2. Install Docker following the official guide for Debian 13 Trixie:
+   https://docs.docker.com/engine/install/debian/
+
+3. Docker Compose v2 comes bundled with modern Docker Engine installs;
+   verify with: docker compose version
+
+4. Add your user to the docker group (relog required after):
+   sudo usermod -aG docker $USER
+
+5. Ensure the Docker daemon is running and enabled on boot:
+   sudo systemctl enable --now docker
+
+6. Install FreeRDP 3.x.x:
+   sudo apt install freerdp3-x11
+   # confirmed available in Debian 13 Trixie: 3.15.0+dfsg-2.1+deb13u3
+
+7. Install Winboat itself (AppImage or .deb from the GitHub releases page).
+   Winboat's own installer will re-verify all of the above via its
+   Pre-Requisites screen before allowing setup to continue.

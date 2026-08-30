@@ -1,0 +1,14 @@
+[Keyboard]
+NumLock=1
+
+[Mouse]
+cursorTheme=Win10OS-cursors
+
+[Libinput]
+naturalScroll=true
+
+[Libinput][Touchpad]
+naturalScroll=true
+
+[Touchpad]
+naturalScroll=true

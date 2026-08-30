@@ -1,0 +1,12 @@
+# AppArmor
+
+Verified via chroot (package/service state):
+- apparmor 4.1.0-1 installed
+- libapparmor1 4.1.0-1 installed
+- systemctl is-enabled apparmor -> enabled
+- Module reports loaded (aa-status)
+
+apparmor-profiles package NOT installed - Proton OS relies on
+whatever AppArmor profiles individual packages ship with directly,
+not the separate curated profile bundle. No custom Proton OS
+profiles have been added.
