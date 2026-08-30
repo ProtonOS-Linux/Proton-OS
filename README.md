@@ -14,6 +14,20 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Monitor%20Promotion%203-c5e3e05c.png/max/600/1" width="45%" alt="Proton OS Desktop">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/web1-de7361a6.png/max/600/1" width="45%" alt="Familiar Desktop Layout">
+</p>
+<p align="center">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/web8-f8f35860.png/max/600/1" width="45%" alt="Dark Mode">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Screenshot%202026-07-24%20120357-1c7d7036.png/max/600/1" width="45%" alt="Office Apps Ready to Go">
+</p>
+
+More screenshots on [SourceForge](https://sourceforge.net/projects/proton-os/).
+
+---
 ## Key Features for Business
 
 * **Familiar Desktop Interface:** Intuitive layout, Start-style application launcher, and system panel designed to mirror traditional Windows workflows.
