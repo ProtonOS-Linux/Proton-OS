@@ -79,7 +79,7 @@ Native Linux equivalents are pre-installed for common tasks (office, browsing, P
 Proton OS is built on Debian 13, which has broad hardware support out of the box. Most USB printers/scanners work via standard Linux drivers (CUPS). Check manufacturer Linux driver availability for specialized hardware.
 
 **Can our IT team manage this remotely like a Windows fleet?**
-Standard Linux remote administration tools apply (SSH, VNC, etc.). Formal fleet-management tooling/guides are on the roadmap — contributions welcome.
+Standard Linux remote administration tools apply (SSH, VNC, etc.). You can use standard RMM that are on the market that support linux.
 
 **Is this actually secure, or just "secure by default" marketing?**
 Every security claim in this repo is backed by verified configuration, documented under `security/` — including exact package versions and command output used to confirm each setting (firewall, AppArmor, automatic updates). Nothing here is assumed; it was checked against a live install.
