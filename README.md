@@ -4,7 +4,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Debian 13](https://img.shields.io/badge/Debian-13%20Trixie-red.svg)](https://www.debian.org/)
 
-🌐 **Website:** [protonos.org](https://linuxprotonos.com) &nbsp;|&nbsp; ⬇️ **Download:** [SourceForge](https://sourceforge.net/projects/proton-os/)
+🌐 **Website:** [protonos.org](https://protonos.org) &nbsp;|&nbsp; ⬇️ **Download:** [SourceForge](https://sourceforge.net/projects/proton-os/)
 
 A secure, Windows-familiar Linux distribution built for small business operations, zero learning curve, instant productivity, no telemetry, secure and stable out of the box.
 
