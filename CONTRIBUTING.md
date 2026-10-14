@@ -2,7 +2,7 @@
 
 Thanks for your interest in improving Proton OS! Contributions of all kinds are welcome, including:
 
-- **Hardware compatibility reports** — especially legacy BIOS-only systems, different GPU vendors, and unusual motherboard/USB controller combinations (see `security/` and `BUILD.md` for context on known quirks).
+- **Hardware compatibility reports** — especially legacy BIOS-only systems, different GPU vendors, and unusual motherboard/USB controller combinations (see `HARDWARE.md` for known quirks).
 - **Bug reports** — open an issue describing the problem, your hardware, and steps to reproduce.
 - **Documentation improvements** — corrections, clarifications, or missing setup steps in any of the files under this repo.
 - **Feature suggestions** — especially around fleet management / remote administration tooling for small business IT teams.

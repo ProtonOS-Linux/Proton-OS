@@ -141,16 +141,18 @@ Compare the output against the SHA-256 value above — they should match exactly
 
 ```text
 Proton-OS/
-├── sddm/                # Login screen fixes (avatar, theme) - login.defs, kde_settings.conf
-├── grub/                # Boot menu configs - grub.cfg, isolinux.cfg
-├── calamares/           # Installer settings and shellprocess scripts
+├── branding/            # About page, os-release, icon defaults, wallpaper exclusion, look-and-feel notes
+├── calamares/           # Installer: password rule, EFI id, restart script, third-party fonts page
+├── grub/                # Live USB boot menus (grub.cfg, isolinux.cfg) and the Proton GRUB theme
 ├── plymouth/            # Boot splash config - plymouthd.conf
-├── skel/                # Default user config templates (/etc/skel overlay)
-├── packages/            # Package holds and apt install/purge commands
-├── software/            # Pre-installed app install methods (Brave, Collabora, Winboat, etc.)
+├── sddm/                # Login screen: login.defs, kde_settings.conf, Slate background
+├── skel/                # Default user settings (/etc/skel overlay)
+├── packages/            # Package holds and every apt/flatpak install and removal
+├── software/            # Pre-installed apps (Brave, Collabora, Winboat/Podman, earlyoom)
 ├── security/            # Verified security defaults (AppArmor, UFW, unattended-upgrades)
-├── BUILD.md             # Step-by-step Cubic build procedure
+├── BUILD.md             # From-scratch Cubic build guide
 ├── HARDWARE.md          # Tested hardware and known boot quirks
 ├── CONTRIBUTING.md      # How to report bugs and help
 ├── LICENSE              # GNU General Public License v3.0
 └── README.md            # Repository overview
+```

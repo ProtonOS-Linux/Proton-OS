@@ -33,7 +33,7 @@ Most of the look and layout is stored as ready-made files in this repo, so a new
 | `plymouth/proton-splash/` | `/usr/share/plymouth/themes/proton-splash/` | Boot splash theme |
 | `calamares/branding/proton/` | `/etc/calamares/branding/proton/` | Installer branding and slideshow |
 | `skel/` | `/etc/skel/` | Default user settings (panel, Start menu, favorites, shortcuts, effects…) |
-| `grub/` | ISO `boot/grub/` and `isolinux/` | Live USB boot menus and GRUB theme |
+| `grub/` | ISO `boot/grub/` and `isolinux/` | Live USB boot menus and GRUB theme (already in the repo) |
 
 > **First time only:** if these folders aren't in the repo yet, export them from the current Core Cubic project first. See [Appendix A](#appendix-a-export-the-current-core-files-into-the-repo).
 
@@ -850,11 +850,14 @@ sudo mkdir -p "$PROJECT/custom-disk/boot/grub/themes"
 sudo cp -r ~/Proton-OS/grub/themes/proton "$PROJECT/custom-disk/boot/grub/themes/"
 ```
 ```bash
+sudo cp ~/splash-new/grub-splash.png "$PROJECT/custom-disk/boot/grub/themes/proton/background.png"
+```
+```bash
 sudo sed -i '/^background_image \/boot\/grub\/splash.png$/a set theme=/boot/grub/themes/proton/theme.txt' "$PROJECT/custom-disk/boot/grub/grub.cfg"
 grep -n -e '^background_image' -e '^set theme=' "$PROJECT/custom-disk/boot/grub/grub.cfg"; ls "$PROJECT/custom-disk/boot/grub/themes/proton/" | wc -l
 ```
 
-Expected: the theme line right after the background, and 11 files (`theme.txt`, `background.png` and nine `select_*.png`).
+Expected: the theme line right after the background, and 11 files (`theme.txt`, `background.png` and nine `select_*.png`). The repo holds `theme.txt` and the `select_*.png` files; `background.png` is the Slate image made above.
 
 **Secure Boot check:** `EFI/boot/bootx64.efi` in the ISO must be the Microsoft-signed shim, not an unsigned GRUB:
 
@@ -940,7 +943,7 @@ Run this once on the build machine (host terminal) to save the files this guide 
 
 ```bash
 CORE=/home/thrices/cubic-project; R=$CORE/custom-root; REPO=~/Proton-OS
-mkdir -p $REPO/assets/wallpapers $REPO/assets/pixmaps $REPO/calamares/branding $REPO/grub/themes
+mkdir -p $REPO/assets/wallpapers $REPO/assets/pixmaps $REPO/calamares/branding
 cp ~/Documents/"Proton Background"/proton-os-business-*-4k.png $REPO/assets/wallpapers/
 cp $R/usr/share/pixmaps/proton-start.png $REPO/assets/pixmaps/
 cp -r $R/usr/share/plymouth/themes/proton-splash $REPO/plymouth/
@@ -948,8 +951,6 @@ cp $R/etc/plymouth/plymouthd.conf $REPO/plymouth/
 cp $R/usr/share/proton-os/99-proton-plymouth.conf $R/etc/initramfs-tools/hooks/proton-plymouth-fonts $REPO/plymouth/
 cp -r $R/etc/calamares/branding/$(grep '^branding:' $R/etc/calamares/settings.conf | awk '{print $2}') $REPO/calamares/branding/proton
 cp $R/etc/calamares/modules/shellprocess_removeautologin.conf $REPO/calamares/
-cp -r $CORE/custom-disk/boot/grub/themes/proton $REPO/grub/themes/
-cp $CORE/custom-disk/boot/grub/grub.cfg $CORE/custom-disk/isolinux/isolinux.cfg $REPO/grub/
 sudo cp -a $R/etc/skel/. $REPO/skel/ && sudo chown -R $USER: $REPO/skel
 rm -rf $REPO/skel/.config/kdedefaults $REPO/skel/.cache
 ```
