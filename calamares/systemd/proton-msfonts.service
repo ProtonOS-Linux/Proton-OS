@@ -1,0 +1,10 @@
+[Unit]
+Description=Proton OS - install Microsoft core fonts when online
+ConditionPathExists=/var/lib/proton/msfonts-pending
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/proton-msfonts
+TimeoutStartSec=15min

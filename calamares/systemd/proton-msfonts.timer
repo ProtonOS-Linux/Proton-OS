@@ -1,0 +1,10 @@
+[Unit]
+Description=Proton OS - retry Microsoft core fonts install until done
+ConditionPathExists=/var/lib/proton/msfonts-pending
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
