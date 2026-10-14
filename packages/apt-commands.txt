@@ -1,2 +1,42 @@
-apt purge sddm-theme-debian-breeze
-# targeted rm -rf for debian-theme (not apt-managed)
+# Proton OS 1.0 Core - package changes (run in the Cubic chroot)
+# Dry run each purge first with: apt-get -s purge <packages>
+# Full steps and checks: BUILD.md sections 2-4
+
+## Holds (redo at the start of every Cubic session)
+apt-mark hold grub-efi-amd64-signed shim-signed
+
+## Removed
+apt purge -y 'libreoffice*' variety
+apt purge -y gnome-remote-desktop gnome-user-share rygel rygel-playbin rygel-tracker libfreerdp-server3-3
+apt purge -y golang-1.24 golang-go golang-src buildah gcc-14 g++-14 build-essential
+apt purge -y fonts-noto-extra fonts-noto-cjk-extra fonts-noto-ui-extra ibus-data gnome-user-docs gnome-backgrounds pocketsphinx-en-us
+apt purge -y sddm-theme-debian-breeze
+rm -rf /usr/share/sddm/themes/debian-theme        # targeted rm, not apt-managed
+apt purge -y docker.io docker-ce docker-ce-cli containerd containerd.io docker-compose-plugin   # if present
+groupdel docker
+flatpak uninstall com.freerdp.FreeRDP              # Debian freerdp3-x11 is used instead
+flatpak uninstall --unused
+
+## Kept on purpose (mark manual before autoremove)
+apt-mark manual firefox-esr fuse-overlayfs git bup libdnnl3.6 fonts-noto-core fonts-dejavu-mono freerdp3-x11
+#   libdnnl3.6: removing it also removes gstreamer1.0-plugins-bad and gnome-snapshot
+#   git, bup: needed by kup-backup
+#   fonts-noto-core, fonts-dejavu-mono: boot splash fonts
+
+## Locales
+sed -i 's/^# *en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+locale-gen
+apt purge -y locales-all
+
+## Installed
+apt install -y brave-origin                        # Brave official repo, see software/preinstalled-apps.txt
+apt install -y podman podman-compose fuse-overlayfs freerdp3-x11
+apt install -y /tmp/winboat-0.9.2-amd64.deb        # from github.com/winboat-org/winboat releases
+apt install -y earlyoom ufw apparmor unattended-upgrades
+apt install -y file-roller kup-backup
+flatpak install -y --system flathub com.collabora.Office
+flatpak config --set languages '*all*'
+
+## Clean up
+apt autoremove --purge -y
+dpkg -l | awk '/^rc/{print $2}' | xargs -r dpkg --purge
