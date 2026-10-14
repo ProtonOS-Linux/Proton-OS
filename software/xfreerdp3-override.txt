@@ -1,0 +1,4 @@
+[Desktop Entry]
+# Proton OS: copy of /usr/share/applications/xfreerdp3.desktop with this line added,
+# saved as /usr/local/share/applications/xfreerdp3.desktop (hides FreeRDP from Start > Internet)
+NoDisplay=true

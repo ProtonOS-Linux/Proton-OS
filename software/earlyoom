@@ -1,0 +1,4 @@
+# /etc/default/earlyoom on Proton OS 1.0 Core
+# Closes the app using the most memory when free RAM and swap both drop below 10%,
+# but never the desktop itself. No quotes or spaces inside the --avoid list.
+EARLYOOM_ARGS="-r 3600 --avoid ^(kwin.*|plasmashell|ksmserver|Xwayland|Xorg|sddm.*|systemd.*|dbus-daemon|dbus-broker|pipewire.*|wireplumber)$"
