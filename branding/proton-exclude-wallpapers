@@ -1,0 +1,2 @@
+# Proton OS: do not install KDE default "Next" (Nuvole) wallpaper
+path-exclude=/usr/share/wallpapers/Next/*

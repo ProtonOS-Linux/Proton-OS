@@ -1,0 +1,5 @@
+[General]
+LogoPath=/usr/share/pixmaps/proton-start.png
+Website=https://www.protonos.org/
+Version=1.0
+Variant=Core

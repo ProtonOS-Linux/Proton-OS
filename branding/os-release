@@ -1,0 +1,11 @@
+PRETTY_NAME="Proton OS 1.0"
+NAME="Proton OS"
+VERSION_ID="13"
+VERSION="1.0 (based on Debian 13 trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=<copied from /usr/lib/os-release.distrib at build time>
+ID=debian
+LOGO=proton-start
+HOME_URL="https://www.protonos.org/"
+SUPPORT_URL="https://protonos.discourse.group/"
+BUG_REPORT_URL="https://github.com/ProtonOS-Linux/Proton-OS/issues"
