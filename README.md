@@ -119,8 +119,7 @@ Confirm your downloaded ISO hasn't been corrupted or tampered with:
 
 | Algorithm | Checksum |
 |---|---|
-| SHA-256 | `PASTE-NEW-SHA256-HERE` |
-| MD5 | `PASTE-NEW-MD5-HERE` |
+| SHA-256 | `b767091478db7eb5be28718efffb54e827e2ae6eff3c5fd7a349c1ea4c0684b3` |
 
 **Linux/macOS:**
 ```bash
