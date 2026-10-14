@@ -1,4 +1,4 @@
-# Proton OS - Pre-installed Software
+# Proton OS 1.0 Core - Pre-installed Software
 
 ## Brave Browser (brave-origin)
 Installed via official Debian repo method from brave.com/linux:
@@ -10,17 +10,25 @@ sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources \
 sudo apt update
 sudo apt install brave-origin
 
-## ONLYOFFICE Desktop Editors
-Installed via .deb package downloaded directly from
-https://www.onlyoffice.com/download-desktop.aspx
-sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
-sudo apt install -f    # resolve any dependency issues
+## Firefox ESR
+Included in Debian 13. Marked manual so it is never auto-removed
+(used for the web apps):
+sudo apt-mark manual firefox-esr
 
-## LibreOffice (version 26.2.4.2)
-Included in base Debian 13 install by default. Confirmed full suite:
-Writer, Calc, Impress, Draw, Math, Base, plus EN/ES/FR dictionaries.
-No additional install steps needed.
+## Collabora Office (replaces LibreOffice and ONLYOFFICE)
+"Collabora Office Desktop", installed as a system Flatpak from Flathub.
+Opens .docx, .xlsx, .pptx, .odt and other office formats.
+Flatpak languages set to *all*.
 
-## Variety (wallpaper changer)
-Installed from Debian repos:
-sudo apt install variety
+## earlyoom (memory safety switch)
+sudo apt install earlyoom
+Enabled by default on the live session and installed systems, with an
+--avoid list so desktop processes are never chosen.
+
+## Microsoft core fonts (optional)
+Offered on the installer's "Third-party software" page (ticked by
+default). Installed by the proton-msfonts timer/service about two
+minutes after first boot, once online.
+
+## Removed in 1.0 Core
+LibreOffice, ONLYOFFICE, Variety, Docker.
