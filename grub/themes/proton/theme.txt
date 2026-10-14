@@ -1,0 +1,34 @@
+# Proton OS - live USB boot menu theme
+title-text: ""
+desktop-image: "background.png"
+desktop-image-scale-method: "stretch"
+desktop-color: "#1e2329"
+terminal-font: "GNU Unifont Regular 16"
+
++ boot_menu {
+    left = 25%
+    top = 38%
+    width = 50%
+    height = 40%
+    item_font = "GNU Unifont Regular 16"
+    item_color = "#d8dee9"
+    selected_item_color = "#ffffff"
+    selected_item_pixmap_style = "select_*.png"
+    item_height = 34
+    item_padding = 10
+    item_spacing = 6
+    icon_width = 0
+    icon_height = 0
+    scrollbar = false
+}
+
++ label {
+    id = "__timeout__"
+    left = 0
+    top = 85%
+    width = 100%
+    align = "center"
+    color = "#d8dee9"
+    font = "GNU Unifont Regular 16"
+    text = "Starting Proton OS in %d seconds"
+}
