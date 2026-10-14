@@ -25,12 +25,28 @@ settings. This routes USB reads through legacy USB handling instead
 of pure UEFI xHCI. This is a BIOS-side setting on the affected
 machine — not something fixable in the Proton OS build itself.
 
+### USB drive won't boot with Secure Boot on (newer Dell business laptops)
+
+**Symptom:** On some Dell business laptops (observed on a Latitude 5350),
+no Linux USB drive boots while Secure Boot is on.
+
+**Cause:** The BIOS option **"Enable Microsoft UEFI CA"** is off, so the
+firmware rejects the Microsoft-signed shim that Proton OS (and most Linux
+distributions) use for Secure Boot.
+
+**Fix:** In the BIOS, turn on **Enable Microsoft UEFI CA** (under Secure
+Boot settings), save and restart. Secure Boot can stay on.
+
+### Black screen after choosing Start Proton OS
+
+Restart and choose **Start Proton OS - Safe Graphics** (uses `nomodeset`).
+
 ## Not Yet Tested
 
 - Legacy BIOS-only hardware (no UEFI)
 - Broader range of GPU vendors (currently tested primarily on NVIDIA 1080ti Pascal)
 - Older/lower-spec hardware for Winboat's virtualization requirements
-  (KVM support required)
+  (KVM support required; Winboat uses Podman)
 
 ## Reporting Your Results
 

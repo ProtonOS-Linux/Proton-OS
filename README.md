@@ -16,7 +16,7 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 
 ---
 
-## What's in 1.0 Core
+## What's New in 1.0 Core
 
 * **Collabora Office** replaces LibreOffice and ONLYOFFICE — opens .docx, .xlsx, .pptx and .odt files.
 * **Winboat 0.9.2 now runs on Podman** instead of Docker.
@@ -31,6 +31,7 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 ## Screenshots
 
 <p align="center">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Monitor%20Promotion%203-c5e3e05c.png/max/600/1" width="45%" alt="Proton OS Desktop">
   <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/web1-de7361a6.png/max/600/1" width="45%" alt="Familiar Desktop Layout">
 </p>
 <p align="center">
@@ -117,9 +118,6 @@ Confirm your downloaded ISO hasn't been corrupted or tampered with:
 
 **Latest release:** `ProtonOS-Core-1.0-64bit-2026.10.01.iso` (Updated 2026-10-02)
 
-| Algorithm | Checksum |
-|---|---|
-| SHA-256 | `b767091478db7eb5be28718efffb54e827e2ae6eff3c5fd7a349c1ea4c0684b3` |
 
 **Linux/macOS:**
 ```bash
@@ -131,7 +129,7 @@ sha256sum ProtonOS-Core-1.0-64bit-2026.10.01.iso
 Get-FileHash ProtonOS-Core-1.0-64bit-2026.10.01.iso -Algorithm SHA256
 ```
 
-Compare the output against the SHA-256 value above — they should match exactly.
+Compare the output against the SHA-256 checksum published with the release — they should match exactly.
 
 > GPG-signed releases are planned for a future update to provide stronger authenticity verification beyond checksums.
 
