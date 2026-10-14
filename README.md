@@ -31,16 +31,16 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 ## Screenshots
 
 <p align="center">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Proton%20OS%20-%20Slate%20background-d9811a9a.png/max/600/1" width="45%" alt="Proton OS desktop with the Slate background">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Proton%20OS%20-%202-02a0afc6.png/max/600/1" width="45%" alt="Proton OS desktop and Start menu">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Proton%20OS%20-%20Slate%20background-d9811a9a.png/max/max/1" width="45%" alt="Proton OS desktop with the Slate background">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Proton%20OS%20-%202-02a0afc6.png/max/max/1" width="45%" alt="Proton OS desktop">
 </p>
 <p align="center">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/8-29231d50.png/max/600/1" width="45%" alt="Proton OS desktop with the Magenta background">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/9-49ed1e8c.png/max/600/1" width="45%" alt="Proton OS desktop with the Paper background">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/8-29231d50.png/max/max/1" width="45%" alt="Proton OS desktop with the Magenta background">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/9-49ed1e8c.png/max/max/1" width="45%" alt="Proton OS desktop with the Paper background">
 </p>
 <p align="center">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/5-760be4ee.png/max/600/1" width="45%" alt="Window tiling">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/6-8d3f54ca.png/max/600/1" width="45%" alt="Browsing the web">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/5-760be4ee.png/max/max/1" width="45%" alt="Window tiling">
+  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/6-8d3f54ca.png/max/max/1" width="45%" alt="Browsing the web">
 </p>
 
 More screenshots on [SourceForge](https://sourceforge.net/projects/proton-os/).
