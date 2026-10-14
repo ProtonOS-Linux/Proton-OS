@@ -16,7 +16,7 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 
 ---
 
-## What's New in 1.0 Core
+## What's in 1.0 Core
 
 * **Collabora Office** replaces LibreOffice and ONLYOFFICE — opens .docx, .xlsx, .pptx and .odt files.
 * **Winboat 0.9.2 now runs on Podman** instead of Docker.
@@ -31,7 +31,6 @@ Proton OS is a lightweight, secure, and intuitive operating system built on top 
 ## Screenshots
 
 <p align="center">
-  <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/Monitor%20Promotion%203-c5e3e05c.png/max/600/1" width="45%" alt="Proton OS Desktop">
   <img src="https://a.fsdn.com/con/app/proj/proton-os/screenshots/web1-de7361a6.png/max/600/1" width="45%" alt="Familiar Desktop Layout">
 </p>
 <p align="center">
