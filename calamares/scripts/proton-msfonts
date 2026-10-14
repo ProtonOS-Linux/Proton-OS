@@ -1,0 +1,14 @@
+#!/bin/sh
+# Proton OS: install Microsoft core fonts once online.
+# Runs only if the installer left the marker (option ticked in Calamares).
+MARKER=/var/lib/proton/msfonts-pending
+[ -e "$MARKER" ] || exit 0
+export DEBIAN_FRONTEND=noninteractive
+echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
+if ! dpkg -s ttf-mscorefonts-installer >/dev/null 2>&1; then
+    apt-get -o DPkg::Lock::Timeout=300 update || exit 0
+    apt-get -o DPkg::Lock::Timeout=300 install -y ttf-mscorefonts-installer || exit 0
+fi
+fc-list | grep -qi "Arial" || /usr/lib/msttcorefonts/update-ms-fonts
+fc-list | grep -qi "Arial" && rm -f "$MARKER"
+exit 0

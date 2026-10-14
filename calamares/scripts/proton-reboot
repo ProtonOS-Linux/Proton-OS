@@ -1,0 +1,7 @@
+#!/bin/sh
+# Proton OS: forced reboot after installation, keeping the boot splash on screen.
+sync
+timeout 5 plymouthd --mode=reboot --attach-to-session >/dev/null 2>&1
+timeout 5 plymouth show-splash >/dev/null 2>&1
+sleep 1
+exec systemctl --force reboot
