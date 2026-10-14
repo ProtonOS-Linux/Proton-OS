@@ -12,6 +12,20 @@ A secure, Windows-familiar Linux distribution built for small business operation
 
 Proton OS is a lightweight, secure, and intuitive operating system built on top of **Debian 13 (Trixie)**. Designed specifically for small office environments, non-technical teams, modern and legacy hardware. Proton OS delivers a familiar desktop experience with zero learning curve and zero downtime.
 
+**Current release: Proton OS 1.0 Core**
+
+---
+
+## What's New in 1.0 Core
+
+* **Collabora Office** replaces LibreOffice and ONLYOFFICE — opens .docx, .xlsx, .pptx and .odt files.
+* **Winboat 0.9.2 now runs on Podman** instead of Docker.
+* **earlyoom** is on by default and stops a runaway app before the desktop freezes.
+* **Installer:** Proton-branded boot menu, 8+ character passwords required, optional "Third-party software" step for Microsoft fonts, and a clean automatic restart after installation.
+* **Look:** Win11-style icons, Win10OS cursors and new Proton wallpapers (Business Slate by default, plus Magenta and Paper) on the desktop, lock screen, login screen and USB boot menu.
+* **Branding:** About This System shows Proton OS 1.0 with the Proton logo.
+* **Leaner image:** leftover GNOME services, developer tools and unused packages removed. Variety, Docker, LibreOffice and ONLYOFFICE are gone.
+
 ---
 
 ## Screenshots
@@ -36,7 +50,9 @@ More screenshots on [SourceForge](https://sourceforge.net/projects/proton-os/).
 * **Debian 13 Stability:** Rock-solid upstream core with low system overhead and zero forced bloatware or forced snap packages.
 * **Built-in Security:** Security controls enable by default, automated background security patch update, and built-in firewall configurations.
 * **Hardware Friendly:** Extends the lifecycle of existing office PCs, significantly lowering hardware refresh costs.
-* **Windows App Compatibility:** Run real Windows applications seamlessly alongside native Linux apps via Winboat's Docker + KVM integration, no dual-boot or full VM required.
+* **Windows App Compatibility:** Run real Windows applications seamlessly alongside native Linux apps via Winboat's Podman + KVM integration, no dual-boot or full VM required.
+* **Familiar Shortcuts:** Ctrl+Shift+Esc opens System Monitor (like Task Manager) and NumLock is on at login.
+* **Secure Boot:** Boots on UEFI with Secure Boot enabled, using the Microsoft-signed shim.
 
 ---
 
@@ -45,10 +61,11 @@ More screenshots on [SourceForge](https://sourceforge.net/projects/proton-os/).
 Proton OS ships ready to use out of the box:
 
 - **Brave Browser** — privacy-focused browser, installed via Brave's official repo
-- **ONLYOFFICE Desktop Editors** — full office suite with strong Microsoft Office format compatibility
-- **LibreOffice** (full suite: Writer, Calc, Impress, Draw, Math, Base) — included by default with Debian 13
-- **Variety** — automatic wallpaper rotation
-- **Winboat** — run Windows applications directly on Proton OS via Docker + KVM virtualization
+- **Firefox ESR** — kept for the web apps
+- **Collabora Office** — full office suite (documents, spreadsheets, presentations) with Microsoft Office format compatibility, installed from Flathub
+- **Winboat 0.9.2** — run Windows applications directly on Proton OS via Podman + KVM virtualization
+- **earlyoom** — memory safety switch, enabled by default
+- **Microsoft core fonts** — optional, selected in the installer and installed on first boot when online
 
 See `software/` for exact install commands and Winboat's prerequisites.
 
@@ -64,8 +81,8 @@ See `software/` for exact install commands and Winboat's prerequisites.
 | **Firewall enabled by default** | Yes (UFW, deny incoming) | Yes | Varies by distro/install |
 | **AppArmor / mandatory access control** | Enabled by default | N/A (different security model) | Often not enabled by default |
 | **Automatic security updates** | Yes, out of the box | Yes | Manual setup typically required |
-| **Office suite included** | Yes (LibreOffice + ONLYOFFICE) | No (separate purchase/subscription) | Varies |
-| **Run Windows-only apps** | Yes, via Winboat (Docker + KVM) | N/A | Requires manual Wine/VM setup |
+| **Office suite included** | Yes (Collabora Office) | No (separate purchase/subscription) | Varies |
+| **Run Windows-only apps** | Yes, via Winboat (Podman + KVM) | N/A | Requires manual Wine/VM setup |
 | **Hardware support for older PCs** | Yes, extends lifecycle of existing hardware | Increasing minimum requirements each version | Yes, generally lightweight |
 | **Forced OS updates/reboots** | No | Yes | No |
 
@@ -73,7 +90,10 @@ See `software/` for exact install commands and Winboat's prerequisites.
 ## FAQ
 
 **Will my existing Windows applications work?**
-Native Linux equivalents are pre-installed for common tasks (office, browsing, PDFs). For Windows-only software without a Linux version, Winboat runs it directly via a lightweight Docker + KVM Windows environment — see `software/winboat-prerequisites.txt` for setup details.
+Native Linux equivalents are pre-installed for common tasks (office, browsing, PDFs). For Windows-only software without a Linux version, Winboat runs it directly via a lightweight Podman + KVM Windows environment — see `software/winboat-prerequisites.txt` for setup details. When Winboat's setup asks for a container runtime, choose **Podman**.
+
+**Will my Word and Excel files open?**
+Yes, in Collabora Office. Tick the optional Microsoft fonts in the installer so documents look the same as on Windows.
 
 **What about my printer, scanner, or other peripherals?**
 Proton OS is built on Debian 13, which has broad hardware support out of the box. Most USB printers/scanners work via standard Linux drivers (CUPS). Check manufacturer Linux driver availability for specialized hardware.
@@ -96,21 +116,21 @@ Proton OS runs on most UEFI-based hardware and modern-to-slightly-older machines
 
 Confirm your downloaded ISO hasn't been corrupted or tampered with:
 
-**Latest release:** `ProtonOS-1.0-64bit-2026.08.19.iso` (Updated 2026-08-19)
+**Latest release:** `ProtonOS-Core-1.0-64bit-2026.10.01.iso` (Updated 2026-10-02)
 
 | Algorithm | Checksum |
 |---|---|
-| SHA-256 | `c20bd28f9721e3e125b5126d443e8a55439a345e513c6363df8ad208bcb5a16e` |
-| MD5 | `014271bbb2233a632faf5136fad9a3ed` |
+| SHA-256 | `PASTE-NEW-SHA256-HERE` |
+| MD5 | `PASTE-NEW-MD5-HERE` |
 
 **Linux/macOS:**
 ```bash
-sha256sum ProtonOS-1.0-64bit-2026.08.19.iso
+sha256sum ProtonOS-Core-1.0-64bit-2026.10.01.iso
 ```
 
 **Windows (PowerShell):**
 ```powershell
-Get-FileHash ProtonOS-1.0-64bit-2026.08.19.iso -Algorithm SHA256
+Get-FileHash ProtonOS-Core-1.0-64bit-2026.10.01.iso -Algorithm SHA256
 ```
 
 Compare the output against the SHA-256 value above — they should match exactly.
@@ -125,12 +145,14 @@ Compare the output against the SHA-256 value above — they should match exactly
 Proton-OS/
 ├── sddm/                # Login screen fixes (avatar, theme) - login.defs, kde_settings.conf
 ├── grub/                # Boot menu configs - grub.cfg, isolinux.cfg
-├── calamares/           # Installer shellprocess scripts
+├── calamares/           # Installer settings and shellprocess scripts
 ├── plymouth/            # Boot splash config - plymouthd.conf
 ├── skel/                # Default user config templates (/etc/skel overlay)
 ├── packages/            # Package holds and apt install/purge commands
-├── software/            # Pre-installed app install methods (Brave, ONLYOFFICE, Winboat, etc.)
+├── software/            # Pre-installed app install methods (Brave, Collabora, Winboat, etc.)
 ├── security/            # Verified security defaults (AppArmor, UFW, unattended-upgrades)
 ├── BUILD.md             # Step-by-step Cubic build procedure
+├── HARDWARE.md          # Tested hardware and known boot quirks
+├── CONTRIBUTING.md      # How to report bugs and help
 ├── LICENSE              # GNU General Public License v3.0
 └── README.md            # Repository overview
